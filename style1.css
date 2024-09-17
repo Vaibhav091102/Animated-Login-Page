@@ -1,0 +1,126 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(84, 13, 94, 0.2),
+    #c06a08
+  ); /* Light grey background */
+  margin: 0;
+}
+
+.box {
+  width: calc(100%-20px);
+  height: 690px;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-self: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: width 1s ease-in-out; /* Smooth transition to 50% width */
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image covers the container */
+  animation: expand 1s ease-in-out forwards;
+}
+.logo {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  opacity: 0.8;
+  border-radius: 50%;
+}
+@keyframes expand {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.invisible {
+  animation: invisible 1s forwards; /* Use the invisible animation */
+  transform-origin: center; /* Make sure the element shrinks toward its center */
+}
+
+@keyframes invisible {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.login-container {
+  width: 0; /* Initially hidden */
+  height: 100%;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: width 1s ease-in-out, opacity 2s ease-in-out;
+}
+.login-form {
+  color: #f5e796;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-form input {
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  border-radius: 40px;
+}
+
+.login-form button {
+  padding: 10px;
+  width: 300px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 60px;
+}
+
+.links {
+  display: flex; /* Align links horizontally */
+  justify-content: space-evenly; /* Space between the links */
+  width: 100%;
+  margin-top: 10px; /* Space above the links */
+  font-size: 14px;
+}
+
+.links a {
+  color: rgb(229, 255, 0); /* Link color */
+  text-decoration: none; /* Remove underline */
+  margin: 0 5px; /* Space between links */
+}
+
+.links a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: aliceblue;
+}
+
+.error-message {
+  margin: 10px;
+}
