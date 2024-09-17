@@ -33,15 +33,7 @@ body {
   object-fit: cover; /* Ensures the image covers the container */
   animation: expand 1s ease-in-out forwards;
 }
-.logo {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  left: 50%;
-  opacity: 0.8;
-  border-radius: 50%;
-}
+
 @keyframes expand {
   0% {
     transform: scale(0);
